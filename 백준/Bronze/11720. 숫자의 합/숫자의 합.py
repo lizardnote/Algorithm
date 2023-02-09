@@ -1,0 +1,5 @@
+n = int(input())
+data = list(input())
+data_int = list(map(int, data))
+total = sum(data_int)
+print(total)
