@@ -3,10 +3,8 @@ def solution(array, commands):
     
     for z in commands:
         i ,j ,k = z
-        i = i-1
-        k = k-1
-        slice = array[i:j]
+        slice = array[i-1:j]
         slice.sort()
-        answer.append(slice[k])
+        answer.append(slice[k-1])
         slice.clear()
     return answer
