@@ -1,0 +1,9 @@
+def solution(numbers):
+    answer = []
+    ans = []
+    
+    for i in range(len(numbers)-1):
+        for j in range(i+1,len(numbers)):
+            answer.append(numbers[i]+numbers[j])
+            
+    return sorted(set(answer))
