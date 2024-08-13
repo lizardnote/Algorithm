@@ -1,8 +1,5 @@
-def solution(x,n):
+def solution(x, n):
     answer = []
-    a = 0
-    for i in range(n):
-        answer.append(a+x)
-        a+=x
-    return answer
+    return [x*i+x for i in range(0,n)]
+        
     
