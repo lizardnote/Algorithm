@@ -1,4 +1,3 @@
 def solution(n):
-    answer = [ int(i) for i in str(n)]
-    
-    return answer[::-1]
+    ex = [int(x) for x in str(n)]
+    return ex[::-1]
