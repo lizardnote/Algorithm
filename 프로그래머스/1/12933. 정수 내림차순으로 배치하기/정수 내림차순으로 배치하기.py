@@ -1,5 +1,5 @@
 def solution(n):
-    temp = [i for i in str(n)]
-    temp.sort(reverse=True)
-    return int("".join(temp))
+    new = [x for x in str(n)]
+    new.sort(reverse=True)
     
+    return int(''.join(new))
