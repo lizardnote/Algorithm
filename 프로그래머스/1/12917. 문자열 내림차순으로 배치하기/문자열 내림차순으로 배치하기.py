@@ -1,3 +1,4 @@
 def solution(s):
-    answer = ''
-    return "".join(sorted(s,reverse=True))
+    li_s = list(s)
+    li_s.sort(reverse = True)
+    return "".join(li_s)
