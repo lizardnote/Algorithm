@@ -1,12 +1,10 @@
 def solution(sizes):
-    
-    sizes.sort(key = lambda x : x, reverse = True)
-    x,y = max(sizes)
-    
-    for i in sizes:
-        if x < max(i) :
-            x = max(i)
-        if y < min(i) :
-            y = min(i)
+    answer = 0
+    list_min = []
+    list_max = []
+    for a,b in sizes:
+        list_min.append(min(a,b))
+        list_max.append(max(a,b))
         
-    return x*y
+    return max(list_min) * max(list_max)
+
