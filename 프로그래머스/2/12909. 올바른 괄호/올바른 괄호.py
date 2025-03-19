@@ -1,14 +1,15 @@
+from collections import deque
+    
 def solution(s):
-    answer = True
-    st_list = [0]
+    dq = deque([0])
     for i in s:
-        if i ==")":
-            if st_list[-1] == "(":
-                st_list.pop()
-                # print(st_list)
+        if i == ")":
+            if dq[-1] == "(" :
+                dq.pop()
             else:
-                st_list.append(i)
+                dq.append(i)
         else:
-            st_list.append(i)
-        
-    return True if len(st_list) == 1 else False
+            dq.append(i)
+            
+    return True if len(dq)==1 else False
+                
