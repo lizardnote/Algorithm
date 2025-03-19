@@ -1,18 +1,14 @@
 def solution(s):
     answer = True
-    stack = []
-    
+    st_list = [0]
     for i in s:
-        if i == "(":
-            stack.append(i)
-
-        else:
-            if stack == []:
-                answer = False
+        if i ==")":
+            if st_list[-1] == "(":
+                st_list.pop()
+                # print(st_list)
             else:
-                stack.pop()
-    
-    if stack != []:
-        answer = False
+                st_list.append(i)
+        else:
+            st_list.append(i)
         
-    return answer
+    return True if len(st_list) == 1 else False
