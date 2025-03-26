@@ -1,15 +1,9 @@
-li=[]
-data = [i for i in range(1,31)]
+stu = [i for i in range(1,31)]
 
-while 1:
-    try:
-        n = int(input())
-        li.append(n)
-    except:
-        break
+for _ in range(0,28):
+    a = int(input())
+    stu.remove(a)
+    
+print(min(stu))
+print(max(stu))
 
-diff = list(set(data)-set(li))
-
-print(min(diff))
-print(max(diff))
-        
